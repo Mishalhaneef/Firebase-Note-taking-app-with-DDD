@@ -1,0 +1,34 @@
+
+abstract class Failure {}
+
+class InvalidEmailFailure implements Failure {
+  final String failedValue;
+  InvalidEmailFailure({required this.failedValue});
+}
+
+class InvalidPasswordFailures implements Failure {
+  final String failedValue;
+
+  InvalidPasswordFailures({required this.failedValue});
+}
+
+class ExceedingLength {
+  final String lengthExceed;
+  ExceedingLength({required this.lengthExceed});
+}
+
+void t(EmailAddress emailAddress) {
+  if (emailAddress.failure == null) {
+// value is valid
+    emailAddress.value;
+  } else {
+// show error snack bar
+  }
+}
+
+
+// erroor showin get or else method
+String emailTextanotherWay = email.value.getOrElse(
+    () => 'sone failure happen',
+  );
+
