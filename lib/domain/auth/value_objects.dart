@@ -27,14 +27,14 @@ class Password extends ValueObject<String> {
   const Password._(this.value);
 }
 
-class PhoneNumber extends ValueObject<String> {
-  final Either<ValueFailure<String>, String> value;
+// class PhoneNumber extends ValueObject<String> {
+//   final Either<ValueFailure<String>, String> value;
 
-  factory PhoneNumber(String input) {
-    assert(input != null);
-    return PhoneNumber._(
-      validatePhoneNumber(input),
-    );
-  }
-  const PhoneNumber._(this.value);
-}
+//   factory PhoneNumber(String input) {
+//     assert(input != null);
+//     return PhoneNumber._(
+//       validatePhoneNumber(input),
+//     );
+//   }
+//   const PhoneNumber._(this.value);
+// }
