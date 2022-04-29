@@ -14,12 +14,12 @@ import 'value_objects.dart';
 // FirebaseAuth, GoogleSignIn
 
 abstract class IAuthFacade {
-  Future<Either<AuthFailure, Unit>> registerWithEmailAndPasswordAndPhoneNumber({
+  Future<Either<AuthFailure, Unit>> registerWithEmailAndPassword({
     required EmailAddress emailAddress,
     required Password password,
   });
 
-  Future<Either<AuthFailure, Unit>> signInWithEmailAndPasswordAndPhoneNumber({
+  Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword({
     required EmailAddress emailAddress,
     required Password password,
   });
